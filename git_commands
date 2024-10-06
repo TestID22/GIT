@@ -56,3 +56,10 @@ git config --global alias.lol log -10
 git config --global alias.last log -1 -p 
 
 
+git reflog
+# вы увидите список всего,
+# что сделали в git, во всех ветках!
+# у каждого элемента есть индекс HEAD@{индекс}
+# найдите тот, перед которым всё сломалось
+git reset HEAD@{index}
+# волшебная машина времени
