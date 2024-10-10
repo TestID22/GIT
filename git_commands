@@ -9,6 +9,7 @@ git status
 git add .
 git commit -m 'comment'
 git commit --amend -m 'comment'
+git commit --amend --no-edit
 
 git restore --stage <fileName> 
 git restore <filename>
@@ -25,6 +26,9 @@ git switch -c <branchName>
 
 git branch --no-nmerged 
 git branch --merged 
+git branch -d Testing 
+git branch -D testing
+git push origin —delete <bad_branch_name>
 
 git branch --move bad_branch_name correct_name 
 git push --set-upstream origin correct_branch 
@@ -32,6 +36,13 @@ git push --set-upstream origin correct_branch
 git merge <branchName> 
 git rebase <branchName> 
 git rebase -i Head~3 - squash 
+r - изменить коммент
+p - оставить
+f - cжать без коммента
+s - сжать с комментом
+d - удалить
+exec - стартануть команду. тесты например 
+
 
 git tag 
 git tag -a <tagName> -m <comment> 
@@ -55,6 +66,9 @@ git log -p
 git config --global alias.lol log -10
 git config --global alias.last log -1 -p 
 
+git pull
+git fetch 
+
 
 git reflog
 # вы увидите список всего,
@@ -63,3 +77,7 @@ git reflog
 # найдите тот, перед которым всё сломалось
 git reset HEAD@{index}
 # волшебная машина времени
+
+# How to restore deleted commit 
+git reflog
+git branch <newBranchName> <commitHash>
