@@ -1,9 +1,11 @@
 git init 
 git clone <repoName> 
 
+
 git config --local username.name "Test22"
 git config --global user.email  johnconnor@gmail.com
 git config --system 
+
 
 git status 
 git add .
@@ -11,27 +13,32 @@ git commit -m 'comment'
 git commit --amend -m 'comment'
 git commit --amend --no-edit
 
+
 git restore --stage <fileName> 
 git restore <filename>
 
+
 git revert <commit> 
+
 
 git reset --soft Head~1
 git reset --mix 
 git reset --hard 
 git rev-list <hash>..<hash> --count 
 
+
 git branch -v
 git switch -c <branchName> 
+
 
 git branch --no-nmerged 
 git branch --merged 
 git branch -d Testing 
 git branch -D testing
 git push origin —delete <bad_branch_name>
-
 git branch --move bad_branch_name correct_name 
 git push --set-upstream origin correct_branch 
+
 
 git merge <branchName> 
 git rebase <branchName> 
@@ -50,6 +57,7 @@ git tag -d v1
 git tag -a <tagName> <commitHash>
 git checkout <tagName>
 
+
 git stash 
 git stash list 
 git stash apply {stashIndex}
@@ -58,13 +66,16 @@ git stash --include-untracked
 git stash --patch 
 git stage branch <branchName> 
 
+
 git log 
 git log --stat
 git log --oneline --decorate --all --graph 
 git log -p 
 
+
 git config --global alias.lol log -10
 git config --global alias.last log -1 -p 
+
 
 git pull
 git fetch 
@@ -77,6 +88,7 @@ git reflog
 # найдите тот, перед которым всё сломалось
 git reset HEAD@{index}
 # волшебная машина времени
+
 
 # How to restore deleted commit 
 git reflog
