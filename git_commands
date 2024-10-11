@@ -53,6 +53,7 @@ exec - стартануть команду. тесты например
 ssh-keygen.exe -t ed25519 -C 'your_email'
 ~/.ssh/
 copy pub key > put in github->setting->ssh
+ssg -t git@github.com - check ssh
 
 git tag 
 git tag -a <tagName> -m <comment> 
