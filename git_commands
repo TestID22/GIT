@@ -2,7 +2,7 @@ git init
 git clone <repoName> 
 
 
-git config --local username.name "Test22"
+git config --local name.name "Test22"
 git config --global user.email  johnconnor@gmail.com
 git config --system 
 
