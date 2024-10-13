@@ -6,6 +6,14 @@ git config --local name.name "Test22"
 git config --global user.email  johnconnor@gmail.com
 git config --system 
 
+git config —global, —local —system 
+
+git config --list --show-origin
+git config —global user.name 'Vitalii"
+git config --global user.email johnconnor@gamil.conm
+git config --list - check all settings 
+
+
 
 git status 
 git add .
@@ -31,7 +39,7 @@ git branch -v
 git switch -c <branchName> 
 
 
-git branch --no-nmerged 
+git branch --no-merged 
 git branch --merged 
 git branch -d Testing 
 git branch -D testing
