@@ -35,9 +35,13 @@ git branch --no-nmerged
 git branch --merged 
 git branch -d Testing 
 git branch -D testing
-git push origin —delete <bad_branch_name>
+
+
 git branch --move bad_branch_name correct_name 
 git push --set-upstream origin correct_branch 
+git remote add <shortName> <remoteBranch name> - how to add remote repo. 
+git push origin —delete master
+git branch -v
 
 
 git merge <branchName> 
