@@ -35,7 +35,7 @@ git reset --hard
 git rev-list <hash>..<hash> --count 
 
 
-git branch -v
+git branch -v - verbose verion
 git switch -c <branchName> 
 git bracnh <branhcName> head becomes on current branch 
 
@@ -43,13 +43,19 @@ git branch --no-merged
 git branch --merged 
 
 git branch -d Testing - delete local branch 
-git branch -D testing - force deletion 
+git branch -D testing - forced local removal
 
 
 git branch --move bad_branch_name correct_name - rename branch 
 git push --set-upstream origin correct_branch - add the new branch into remote
 git push origin —delete master - delete remote branch
 git branch -v
+
+[]
+git switch -c new_branch - created
+git push --set-upstream origin new_branch - add to remote
+git push origin --delete new_branch - delete from remote
+[]
 
 git remote add <shortName> <remoteBranch name> - how to add remote repo. 
 
