@@ -37,20 +37,21 @@ git rev-list <hash>..<hash> --count
 
 git branch -v
 git switch -c <branchName> 
-
+git bracnh <branhcName> head becomes on current branch 
 
 git branch --no-merged 
 git branch --merged 
-git branch -d Testing 
-git branch -D testing
+
+git branch -d Testing - delete local branch 
+git branch -D testing - force deletion 
 
 
-git branch --move bad_branch_name correct_name 
-git push --set-upstream origin correct_branch 
-git remote add <shortName> <remoteBranch name> - how to add remote repo. 
-git push origin —delete master
+git branch --move bad_branch_name correct_name - rename branch 
+git push --set-upstream origin correct_branch - add the new branch into remote
+git push origin —delete master - delete remote branch
 git branch -v
 
+git remote add <shortName> <remoteBranch name> - how to add remote repo. 
 
 git merge <branchName> 
 git rebase <branchName> 
