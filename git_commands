@@ -14,7 +14,6 @@ git config --global user.email johnconnor@gamil.conm
 git config --list - check all settings 
 
 
-
 git status 
 git add .
 git commit -m 'comment'
@@ -88,6 +87,7 @@ git checkout -b <new_branch_name> <commit_hash>
 git stash 
 git stash list 
 git stash apply {stashIndex}
+git stash pop
 git stash --keep-index
 git stash --include-untracked
 git stash --patch 
