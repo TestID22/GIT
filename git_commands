@@ -134,3 +134,4 @@ git reset HEAD@{index}
 git reflog
 git branch <newBranchName> <commitHash>
 
+hook
