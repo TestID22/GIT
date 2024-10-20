@@ -1,5 +1,8 @@
 git init 
 git clone <repoName> 
+git pull 
+git fetch
+git merge
 
 
 git config --local name.name "Test22"
@@ -12,7 +15,6 @@ git config --list --show-origin
 git config —global user.name 'Vitalii"
 git config --global user.email johnconnor@gamil.conm
 git config --list - check all settings 
-
 
 
 git status 
@@ -34,6 +36,8 @@ git reset --mix
 git reset --hard 
 git rev-list <hash>..<hash> --count  # Посчитать количество коммитов от хеша к хешу
 git rev-list <hash>..head
+git rev-list HEAD —count посчитать колличество коммитов 
+git rev-list c07147e..head --count
 
 
 git branch -v
@@ -115,3 +119,4 @@ git reset HEAD@{index}
 # How to restore deleted commit 
 git reflog
 git branch <newBranchName> <commitHash>
+
