@@ -114,6 +114,8 @@ git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.last 'log -1 HEAD’
 git config --global alias.graph '—oneline —decorate —graph —all'
+git config --global alias.aa "add ."
+git config --global alias.s "status"
 
 git pull
 git fetch 
