@@ -131,7 +131,8 @@ git reset HEAD@{index}
 
 
 # How to restore deleted commit 
-git reflog
+git reflog - # показывает список ДЕЙСТВИЙ во всех ветках 
+git reset HEAD@{index}
 git branch <newBranchName> <commitHash>
 
 hook
