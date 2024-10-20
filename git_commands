@@ -32,7 +32,8 @@ git revert <commit>
 git reset --soft Head~1
 git reset --mix 
 git reset --hard 
-git rev-list <hash>..<hash> --count 
+git rev-list <hash>..<hash> --count  # Посчитать количество коммитов от хеша к хешу
+git rev-list <hash>..head
 
 
 git branch -v
