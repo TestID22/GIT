@@ -40,7 +40,7 @@ git rev-list HEAD —count посчитать колличество комми�
 git rev-list c07147e..head --count
 
 
-git branch -v
+git branch -v - verbose verion
 git switch -c <branchName> 
 git bracnh <branhcName> head becomes on current branch 
 
@@ -48,13 +48,19 @@ git branch --no-merged
 git branch --merged 
 
 git branch -d Testing - delete local branch 
-git branch -D testing - force deletion 
+git branch -D testing - forced local removal
 
 
 git branch --move bad_branch_name correct_name - rename branch 
 git push --set-upstream origin correct_branch - add the new branch into remote
 git push origin —delete master - delete remote branch
 git branch -v
+
+[]
+git switch -c new_branch - created
+git push --set-upstream origin new_branch - add to remote
+git push origin --delete new_branch - delete from remote
+[]
 
 git remote add <shortName> <remoteBranch name> - how to add remote repo. 
 
@@ -87,6 +93,7 @@ git checkout -b <new_branch_name> <commit_hash>
 git stash 
 git stash list 
 git stash apply {stashIndex}
+git stash pop
 git stash --keep-index
 git stash --include-untracked
 git stash --patch 
@@ -101,7 +108,12 @@ git log -p
 
 git config --global alias.lol log -10
 git config --global alias.last log -1 -p 
-
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.last 'log -1 HEAD’
+git config --global alias.graph '—oneline —decorate —graph —all'
 
 git pull
 git fetch 
