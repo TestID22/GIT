@@ -24,7 +24,7 @@ git commit --amend -m 'comment'
 git commit --amend --no-edit
 
 
-git restore --stage <fileName> 
+git restore --staged <fileName> 
 git restore <filename>
 
 
