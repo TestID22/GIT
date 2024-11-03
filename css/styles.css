@@ -108,7 +108,7 @@ body {
     display: inline-block;
     align: center;
     transition: transform 0.5s ease-in-out;
-    color: #0091b1;
+    color: #bea577;
 }
 
 /*Neon input*/
@@ -271,11 +271,9 @@ commit li span {
 }
 
 
-
 .scrollable {
     width: auto;
     height: 1200px;
     overflow: auto;
-    border: 1px solid #ccc;
     padding: 10px;
 }
