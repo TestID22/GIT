@@ -180,9 +180,19 @@ input[type="radio"]:checked+label {
     opacity: 1;
 }
 
+.neon-button.active {
+    background-color: #0091b1;
+}
+
 .neon-button:hover {
     opacity: 1;
     border-color: #BAE1FF;
+}
+
+
+
+.neon-button.active {
+    background-color: #004f60;
 }
 
 .hidden {
