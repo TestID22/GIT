@@ -1,11 +1,25 @@
 * {
+    font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
 }
 
 body {
     font-family: 'Press Start 2P', cursive;
-    color: #ffffff;
+    color: #c8c8c8;
+    background-color: #747474;
+}
+
+body p {
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+#wrapper {
+    margin: auto 50px;
+    display: auto;
+    height: 1200px;
+    background-color: #000000;
 }
 
 .nav_bar a {
@@ -15,12 +29,11 @@ body {
 .nav_bar a:hover {
     text-decoration: none;
     padding-bottom: 2px;
-    border-bottom: 2px solid #00ff00;
+    border-bottom: 2px solid #BAE1FF;
 }
 
-#wrapper {
-    margin: auto 50px;
-    display: auto;
+.nav_bar a:visited {
+    color: #BAE1FF;
 }
 
 .container {
@@ -95,7 +108,7 @@ body {
     display: inline-block;
     align: center;
     transition: transform 0.5s ease-in-out;
-    color: #0f0;
+    color: #0091b1;
 }
 
 /*Neon input*/
@@ -109,7 +122,7 @@ body {
 }
 
 .neon-input:focus {
-    border-color: #0f0;
+    border-color: #D5C6E0;
 }
 
 .neon-input:focus::placeholder {
@@ -141,7 +154,8 @@ input[type="radio"]:checked+label {
     overflow: hidden;
     outline: none;
     margin: 15px;
-    border: solid 2px #00ff00;
+    border: solid 2px #D5C6E0;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -156,7 +170,7 @@ input[type="radio"]:checked+label {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #00ff00, #33ff33, #00ff00);
+    background: linear-gradient(45deg, #190b33, #105c50, #842a22);
     z-index: -1;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -164,7 +178,11 @@ input[type="radio"]:checked+label {
 
 .neon-button:hover::before {
     opacity: 1;
-    color: #00ff00;
+}
+
+.neon-button:hover {
+    opacity: 1;
+    border-color: #BAE1FF;
 }
 
 .hidden {
@@ -203,7 +221,8 @@ input[type="radio"]:checked+label {
 }
 
 .block_info h5 {
-    color: #00ff00;
+    margin: 10px;
+    color: #0091b1;
 }
 
 .block_info p {
@@ -212,6 +231,13 @@ input[type="radio"]:checked+label {
 
 .block {
     padding: 10px;
+}
+
+.sub_topic {
+    background-color: #004f60;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
 }
 
 .buttons_block {
@@ -234,13 +260,7 @@ commit li span {
     padding-top: 15px;
 }
 
-.description h5 {
-    align-self: start;
-    ;
-    margin: 5px;
-    padding: 5px;
-    color: #00ff00;
-}
+
 
 .scrollable {
     width: auto;

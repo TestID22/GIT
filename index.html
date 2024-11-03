@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div id="wrapper">
+    <div id="wrapper" class="scrollable">
         <div class="container">
             <div id="letterContainer">
                 <h5>PATH to SENIOR QA AUTOMATION</h5>
@@ -49,29 +49,57 @@
         </div>
         <!--hidden blocks-->
         <section description="about_vsc">
-            <div id="advanced_of_vcs" class="hidden block_info">
+            <div id="advanced_of_vcs" class="hidden block_info scrollable">
                 <h5> Why do we need VCS.</h5>
-                <p>
-                    Система контроля версий** — это система, записывающая изменения в файл или набор
-                    файлов в
-                    течение времени и позволяющая вернуться позже к определённой версии.
+                <div class="sub_topic">
+                    <p>
+                        Система контроля версий 
+                    <p> &nbsp;— это система, записывающая изменения в файл или набор
+                        файлов в
+                        течение времени и позволяющая вернуться позже к определённой версии.
 
-                    Она позволяет вернуть файлы к состоянию, в котором они были до изменений,вернуть проект к исходному
-                    состоянию, увидеть изменения, увидеть, кто последний менял
-                    что-то и вызвал проблему, кто поставил задачу и когда и многое другое.
-
-                    1. Когда нужно работать с другими разработчиками (ранее использовались централизованные системы
-                    контроля
-                    версий в которых хранились все данные об изменениях) Минус состоит в том, что если сервер упал, то
-                    все
-                    разработчики не имеют к нему доступ
-                    2. Когда нужно сохранить все версии программы, VCS способна вернуть любую сохранённую версию
-                    программы.
-                </p>
+                        Она позволяет вернуть файлы к состоянию, в котором они были до изменений,вернуть проект к
+                        исходному
+                        состоянию, увидеть изменения, увидеть, кто последний менял
+                        что-то и вызвал проблему, кто поставил задачу и когда и многое другое.
+                </div>
+                <div class="sub_topic">
+                    <p> &nbsp;&nbsp; 1. Когда нужно работать с другими разработчиками (ранее использовались
+                        централизованные
+                        системы
+                        контроля
+                        версий в которых хранились все данные об изменениях) Минус состоит в том, что если сервер упал,
+                        то
+                        все
+                        разработчики не имеют к нему доступ
+                    <p> &nbsp;&nbsp; 2. Когда нужно сохранить все версии программы, VCS способна вернуть любую
+                        сохранённую
+                        версию
+                        программы.
+                    </p>
+                </div>
+                <div class="sub_topic">
+                    <p> &nbsp;&nbsp; Каждый раз, когда вы делаете коммит, то есть сохраняете состояние своего проекта в
+                        Git,
+                        система запоминает, как выглядит каждый файл в этот момент, и сохраняет ссылку на этот
+                        снимок
+                    </p>
+                    <p>
+                        &nbsp;&nbsp; Для примера, чтобы посмотреть историю проекта, Git не нужно соединяться с сервером
+                        для
+                        её получения и отображения — система просто считывает данные напрямую из локальной
+                        базы данных. Это означает, что вы увидите историю проекта практически моментально.
+                        Если вам необходимо посмотреть изменения, сделанные между текущей версией файла и
+                        версией, созданной месяц назад, Git может найти файл месячной давности и локально
+                        вычислить изменения, вместо того, чтобы запрашивать удалённый сервер выполнить эту
+                        операцию, либо вместо получения старой версии файла с сервера и выполнения операции
+                        локально.
+                    </p>
+                </div>
             </div>
         </section>
-        <div id="commit" class="hidden block_info description">
-            <p>
+        <div id="commit" class="hidden block_info scrollable">
+            <h5>What commit consists of</h5>
             <ul>
                 <li><span>1) Hash</span></li>
                 <li><span>2) Author</span></li>
@@ -97,27 +125,30 @@
         </div>
         <!--All git commands-->
         <section description="">
-            <div id="commands" class="hidden block_info scrollable description">
+            <div id="commands" class="hidden block_info  description">
                 <h5>Base</h5>
-                <p>git init
-                <p>git clone "repoName" -
-                <p>git pull
-                <p>git fetch
-                <p>git merge
-
-                    <hr>
+                <div class="sub_topic">
+                    <p>git init
+                    <p>git clone "repoName" -
+                    <p>git pull
+                    <p>git fetch
+                    <p>git merge
+                </div>
+                <hr>
                 <h5>Configs</h5>
-                <p>git config --local name.name "Test22"
-                <p>git config --global user.email johnconnor@gmail.com
-                <p>git config --system
+                <div class="sub_topic">
+                    <p>git config --local name.name "Test22"
+                    <p>git config --global user.email johnconnor@gmail.com
+                    <p>git config --system
 
-                <p>git config —global, —local —system
+                    <p>git config —global, —local —system
 
-                <p>git config --list --show-origin
-                <p>git config —global user.name 'Vitalii"
-                <p>git config --global user.email johnconnor@gamil.conm
-                <p>git config --list - check all settings
-                    <hr>
+                    <p>git config --list --show-origin
+                    <p>git config —global user.name 'Vitalii"
+                    <p>git config --global user.email johnconnor@gamil.conm
+                    <p>git config --list - check all settings
+                </div>
+                <hr>
                 <h5>Create a Commit: Ammend</h5>
                 <p>git status
                 <p>git add .
@@ -285,19 +316,6 @@
                     деплоя или уведомления.
                     # - Пример: Триггер сборки в CI (непрерывной интеграции) после пуша нового кода.
                 </p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
-                <p></p>
                 <hr>
                 <p>
                     # Хуки для рабочего процесса на основе E-mail
