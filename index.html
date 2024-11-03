@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Сайт о кибербезопасности</title>
+    <title>GIT chetsheet</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
@@ -13,42 +13,65 @@
     <div id="wrapper">
         <div class="container">
             <div id="letterContainer">
-                <span>V</span>
-                <span>i</span>
-                <span>t</span>
-                <span>a</span>
-                <span>l</span>
-                <span>i</span>
-                <span>i</span>
-                <span> </span>
-                was here
+                <h5>PATH to SENIOR QA AUTOMATION</h5>
             </div>
+            <p>Here, I describe my path to becoming a Senior Automation QA</p>
         </div>
-        <p>Добро пожаловать на наш сайт о тестировании! Мы стремимся обеспечить качество ваших приложенеий и защитить
-            вас от киберугроз в цифровом мире. Мы предлагаем обучающие материалы, советы по тестированию, написанию
-            фреймворков автоматизации и инструменты для защиты вашей онлайн активности.</p>
+        <div class="buttons_block">
+            <button class="neon-button" onclick="toggleText('advanced_of_vcs')">GIT</button>
+            <button class="neon-button" onclick="toggleText('commit')">Commit</button>
+            <button class="neon-button" onclick="toggleText('text1')">Branch</button>
+            <button class="neon-button" onclick="toggleText('text1')">merge/rebase</button>
+            <button class="neon-button" onclick="toggleText('text1')">Gitignore</button>
+            <button class="neon-button" onclick="toggleText('text1')">Cloning a repository</button>
+            <button class="neon-button" onclick="toggleText('text1')">Credentials</button>
+        </div>
+        <!--hidden blocks-->
+        <div id="advanced_of_vcs" class="hidden block_info">
+            <h5> Why do we need VCS.</h5>
+            <p>
+                Система контроля версий** — это система, записывающая изменения в файл или набор
+                файлов в
+                течение времени и позволяющая вернуться позже к определённой версии.
 
-        <button class="neon-button" id="registrationButton">Registration</button>
-        <div id="registrationForm" class="hidden">
-            <h2>Registration</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input class="neon-input" type="text" id="name" name="name" required placeholder="Name"><br>
-                <label for="email">Email:</label>
-                <input class="neon-input" type="email" id="email" name="email" required placeholder="Email here"><br>
-                <label for="password">Password:</label>
-                <input class="neon-input" type="password" id="password" name="password" required><br>
-                <button class="neon-button" type="submit"
-                    onclick="alert('all data have been stolen by international hackers group')">OK</button>
-            </form>
-            <div>
-                <button class="neon-button" onclick="fallLetters()">Submit</button>
-            </div>
-            <div id="pixelContainer">
-                <button id="pixelButton" class="neon-button" onclick="noise()">noise</button>
-            </div>
-            <script src="scripts/script.js"></script>
+                Она позволяет вернуть файлы к состоянию, в котором они были до изменений,вернуть проект к исходному
+                состоянию, увидеть изменения, увидеть, кто последний менял
+                что-то и вызвал проблему, кто поставил задачу и когда и многое другое.
+
+                1. Когда нужно работать с другими разработчиками (ранее использовались централизованные системы контроля
+                версий в которых хранились все данные об изменениях) Минус состоит в том, что если сервер упал, то все
+                разработчики не имеют к нему доступ
+                2. Когда нужно сохранить все версии программы, VCS способна вернуть любую сохранённую версию программы.
+            </p>
         </div>
+        <div id="commit" class="hidden block_info description">
+            <p>
+            <ul>
+                <li><span>1) Hash</span></li>
+                <li><span>2) Author</span></li>
+                <li><span>3) Time</span></li>
+                <li><span>4) Comment</span></li>
+                <li><span>5) Link to parent commits</span></li>
+                <li><span>6) Link to the object tree. The tree contains links to BLOB (Binary Large Object)
+                        objects. These are
+                        serializable objects.</span></li>
+            </ul>
+            <p>
+                Коммит состоит ИЗ
+            <p>1) HASH - уникальное значение, по которому мы можем отыскать нужный нам коммит.
+                Идентификатор коммита,
+            <p>2) Автор,
+            <p>3) время коммита,
+            <p>4)комментарий, а также
+            <p>5) ссылка на предка, на предыдущий коммит.
+            <p>6) Ссылка на дерево
+                Объектов - Дерево - содержит ссылки на файлы. Blob (Binary Large object)- содержание файла, байты.
+            </p>
+            </p>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    </div>
     </div>
 </body>
 

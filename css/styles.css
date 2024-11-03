@@ -1,14 +1,18 @@
-*{
-	margin: 0;
-	padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Press Start 2P', cursive;
     color: #ffffff;
 }
-#wrapper{
+
+
+
+#wrapper {
     margin: auto 50px;
+    display: auto;
 }
 
 .container {
@@ -16,13 +20,15 @@ body {
     margin: 10px auto;
     padding: 10px;
     color: #ffffff;
-    text-align:  center;
+    text-align: center;
 }
-#form{
+
+#form {
     display: block;
     justify-content: center;
 }
-#form p{
+
+#form p {
     display: block;
     margin: 15px auto;
 }
@@ -54,10 +60,12 @@ h1 {
     font-family: 'Press Start 2P', cursive;
     text-align: center;
 }
+
 p {
     font-size: 16px;
     line-height: 1.5;
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -75,18 +83,16 @@ body {
     margin: 15px auto;
 }
 
-#letterContainer span {
+#letterContainer {
     display: inline-block;
     align: center;
     transition: transform 0.5s ease-in-out;
     color: #0f0;
-    letter-spacing: -30px;
 }
 
 /*Neon input*/
-.neon-input{
-    
-}
+.neon-input {}
+
 .neon-input::placeholder {
     color: #aaa;
     font-family: 'Press Start 2P', cursive;
@@ -102,14 +108,15 @@ body {
     color: #0f0;
 }
 
-.neon-input:focus + label::after {
+.neon-input:focus+label::after {
     width: 100%;
 }
 
-#gender-radio-1{
+#gender-radio-1 {
     margin-top: 15px;
 }
-input[type="radio"]:checked + label {
+
+input[type="radio"]:checked+label {
     color: #0f0;
 }
 
@@ -126,9 +133,10 @@ input[type="radio"]:checked + label {
     overflow: hidden;
     outline: none;
     margin: 15px;
-    border:solid 2px #00ff00;
-    
+    border: solid 2px #00ff00;
+
 }
+
 .neon-button::before {
     content: '';
     position: absolute;
@@ -147,39 +155,59 @@ input[type="radio"]:checked + label {
     color: #00ff00;
 }
 
-.hidden{
+.hidden {
     opacity: 0;
 }
 
-#checkboxes{
+#checkboxes {
     padding-top: 10px;
     display: flex;
     justify-content: center;
     margin-top: 25px;
 }
-#gender{
+
+#gender {
     display: flex;
     justify-content: center;
     margin: 0px auto;
 }
-.custom-control-input{
+
+.custom-control-input {
     display: inline;
     margin-bottom: 20px;
     width: 45px;
     height: 20px;
 }
 
-#hobies{
-    text-align: center;
-    margin: 10px auto;
-}
-
-
 .hidden {
     display: none;
 }
 
-#registrationForm h2{
-    color: #00ff00;
+.block_info {
+    padding: 5px;
+    border: 3px solid grey;
+}
 
+.block {
+    padding: 10px;
+}
+
+.buttons_block {
+    margin: auto;
+    padding: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#commit li {
+    padding: 5px;
+    list-style-type: none;
+}
+
+commit li span {
+    border-bottom: 2px solid greenyellow;
+}
+
+.description p {
+    padding-top: 15px;
 }
