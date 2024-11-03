@@ -1,29 +1,25 @@
 * {
-    font-family: 'Press Start 2P', cursive;
     margin: 0;
     padding: 0;
 }
 
 
 body {
-    font-family: 'Press Start 2P', cursive;
     color: #ffffff;
     background-color: #747474;
 }
 
 body p {
+    font-size: 18px;
     word-spacing: 2px;
     letter-spacing: 1px;
 }
 
-#wrapper {
-    margin: auto 50px;
-    display: auto;
-    height: 1200px;
-    background-color: #000000;
-}
+
 
 .nav_bar a {
+    font-family: 'Press Start 2P', cursive;
+    padding: 0px 10px;
     text-decoration: none;
 }
 
@@ -36,6 +32,7 @@ body p {
 
 .nav_bar a {
     color: #4988af;
+    font-size: 20px;
 }
 
 .container {
@@ -101,9 +98,11 @@ body {
     text-align: center;
 }
 
-#letterContainer {
+#logo {
+    font-family: "Press Start 2P", cursive;
     font-size: 36px;
-    margin: 15px auto;
+    color: rgb(255, 215, 0);
+    margin: 25px;
 }
 
 #letterContainer {
@@ -145,8 +144,8 @@ input[type="radio"]:checked+label {
 
 /*neon_button*/
 .neon-button {
-    font-family: Arial, sans-serif;
-    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
     padding: 10px 20px;
     border: none;
     background-color: transparent;
@@ -205,6 +204,7 @@ input[type="radio"]:checked+label {
 }
 
 .block_info h5 {
+    font-size: 24px;
     margin: 10px;
     color: #4988af;
 }
@@ -241,7 +241,7 @@ commit li span {
 }
 
 .description p {
-    padding-top: 15px;
+    padding-top: 5px;
 }
 
 .scrollable {
