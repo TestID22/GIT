@@ -17,10 +17,11 @@
             </div>
             <div class="nav_bar">
                 <span>LINKS: </span>
-                <a href="#">Python</a>
+                <a href="https://testid22.github.io/Python-Cheetsheet/">Python</a>
                 <a href="#">Playwright</a>
                 <a href="#">Selenium</a>
                 <a href="#">Pytest</a>
+                <a href="#">Patterns</a>
                 <a href="#">Pytest</a>
                 <a href="#">Allure</a>
             </div>
@@ -33,8 +34,18 @@
             <button class="neon-button" onclick="toggleText('text1')">Gitignore</button>
             <button class="neon-button" onclick="toggleText('text1')">Cloning a repository</button>
             <button class="neon-button" onclick="toggleText('text1')">Credentials</button>
-            <button class="neon-button" onclick="toggleText('text1')">Patterns</button>
             <button class="neon-button" onclick="toggleText('commands')">Commands</button>
+        </div>
+        <div class="buttons_block">
+            <button class="neon-button" onclick="toggleText('advanced_of_vcs')">Tags</button>
+            <button class="neon-button" onclick="toggleText('advanced_of_vcs')">reset</button>
+            <button class="neon-button" onclick="toggleText('advanced_of_vcs')">squash</button>
+            <button class="neon-button" onclick="toggleText('advanced_of_vcs')">History</button>
+            <button class="neon-button" onclick="toggleText('advanced_of_vcs')">What VCS is made of</button>
+        </div>
+        <div class="buttons_block">
+            <button class="neon-button" onclick="toggleText('advanced_of_vcs')">Hooks</button>
+            <button class="neon-button" onclick="toggleText('advanced_of_vcs')">alias</button>
         </div>
         <!--hidden blocks-->
         <div id="advanced_of_vcs" class="hidden block_info">
@@ -79,221 +90,233 @@
             </p>
             </p>
         </div>
-        <div id="commands" class="hidden block_info scrollable description">
-            <h5>Base</h5>
-            <p>git init
-            <p>git clone "repoName" -
-            <p>git pull
-            <p>git fetch
-            <p>git merge
+        <!--All git commands-->
+        <section description="">
+            <div id="commands" class="hidden block_info scrollable description">
+                <h5>Base</h5>
+                <p>git init
+                <p>git clone "repoName" -
+                <p>git pull
+                <p>git fetch
+                <p>git merge
 
+                    <hr>
+                <h5>Configs</h5>
+                <p>git config --local name.name "Test22"
+                <p>git config --global user.email johnconnor@gmail.com
+                <p>git config --system
+
+                <p>git config —global, —local —system
+
+                <p>git config --list --show-origin
+                <p>git config —global user.name 'Vitalii"
+                <p>git config --global user.email johnconnor@gamil.conm
+                <p>git config --list - check all settings
+                    <hr>
+                <h5>Create a Commit: Ammend</h5>
+                <p>git status
+                <p>git add .
+                <p>git commit -m 'comment'
+                <p>git commit --amend -m 'comment'
+                <p>git commit --amend --no-edit
+                    <hr>
+                <h5>Restore Revert Reset</h5>
+                <p> git restore --staged "fileName"
+                <p>git restore "filename"
+                <p>git revert "commit"
+
+                <p>git reset --soft Head~1
+                <p>git reset --mix
+                <p>git reset --hard
+                <p>git rev-list "hash".."hash" --count # Посчитать количество коммитов от хеша к хешу
+
+                <p>git rev-list "hash"..head
+                <p>git rev-list HEAD —count посчитать колличество коммитов
+                <p>git rev-list c07147e..head --count
+                    <hr>
+                <h5>Branches: switch: create: merged no merged: push a bracnh to remote repo </h5>
+                <p>git branch -v - verbose verion
+                <p>git switch -c "branchName"
+                <p>git bracnh "branhcName" head becomes on current branch
+                <p>git branch --no-merged
+                <p>git branch --merged
+
+                <p>git branch -d Testing - delete local branch
+                <p>git branch -D testing - forced localremoval
+
+
+                <p>git branch --move "bad_branch_name" "correct_name" - rename branch
+                <p>git push --set-upstream origin "correct_branch" - add the new branch into remote
+                <p>git push origin —delete master - delete remote branch
+                <p>git branch -v
+
+                <p>[]
+                <p>git switch -c new_branch - created
+                <p>git push --set-upstream origin "new_branch" - add to remote
+                <p>git push origin --delete new_branch -delete from remote
+                <p>[]
+
+                <p>git remote add "shortName" "remoteBranch name" - how to add remote repo.
+                    <hr>
+                <h5>Merge VS Rebase: Squash: </h5>
+                <p>git merge "branchName"
+                <p>git rebase "branchName"
+                <p>git rebase -i Head~3 - # squash - but we need to count hashes you want to squash
+                <p>git rev-list "hash"..head
+                <p>git rev-list HEAD —count посчитать колличество коммитов
+                <p>git rev-list c07147e..head --count
+
+                <p>r - изменить коммент
+                <p>p - оставить коммент
+                <p>f - cжать без коммента
+                <p>s - сжать с комментом
+                <p>d - удалить
+                <p>exec - execute tests or smth that can be executable
+                    <hr>
+                <h5>SSH</h5>
+                <p>ssh-keygen.exe -t ed25519 -C 'your_email'
+                <p>~/.ssh/
+                <p> copy pub key > put in github->setting->ssh
+                <p>ssh -T git@github.com - check ssh
+                <p>ssh -T git@gitlab.com - chec gitlab ssh
+                    <hr>
+                <h5>Tags</h5>
+                <p>git tag
+                <p>git tag -a "tagName" -m "comment"
+
+                <p></p>git tag -d v1
+                <p>git tag -a "tagName" "commitHash"
+                <p>git checkout "tagName" - This will put you in a detached HEAD state, meaning you’re not on any
+                    branch. If
+                    you want to make changes,you should create a new branch from that commit:
+                <p>git git checkout -b "new_branch_name" "commit_hash"
+                    <hr>
+                <h5>Stash</h5>
+                <p>git stash
+                <p>git stash list
+                <p>git stash apply {stashIndex}
+                <p>git stash pop
+                <p>git stash --keep-index
+                <p>git stash --include-untracked
+                <p>git stash --patch
+                <p>git stage branch "branchName"
+                    <hr>
+                <h5>Logs</h5>
+                <p>git log
+                <p>git log --stat
+                <p>git log --oneline --decorate --all --graph
+                <p>git log -p
+                    <hr>
+                <h5>Alliases</h5>
+                <p>git config --global alias.lol log -10
+                <p>git config --global alias.last log -1 -p
+                <p>git config --global alias.co checkout
+                <p>git config --global alias.br branch
+                <p>git config --global alias.ci commit
+                <p>git config --global alias.s status
+                <p>git config --global alias.last 'log -1 HEAD’
+                <p>git config --global alias.graph '—oneline —decorate —graph —all'
+                <p>git config --global alias.aa "add ."
+                <p>git config --global alias.s "status"
+                    <hr>
+                <h5>Reflog</h5>
+                <p>git reflog
+                <p># вы увидите список всего, что сделали в git, во всех ветках! у каждого элемента есть индекс
+                    HEAD@{индекс} найдите тот, перед которым всё сломалось
+                <p>git reset HEAD@{index} волшебная машина времени
+
+                <p># How to restore deleted commit
+                <p>git reflog # показывает список ДЕЙСТВИЙ во всех ветках
+                <p>reset HEAD@{index}
+                <p>git branch "newBranchName" "commitHash"
+                    <hr>
+                <h5>Hooks</h5>
+                #
+                HOOKS это возможность запуска пользовательских скриптов в случае позникновения определённых событий
+                #
+                <p>
+                <p># Есть 2 вида хуков</p>
+                <p># Клиентские и Серверные </p>
                 <hr>
-            <h5>Configs</h5>
-            <p>git config --local name.name "Test22"
-            <p>git config --global user.email johnconnor@gmail.com
-            <p>git config --system
+                </p>
+                <p># Клиентские:
+                    # Находятся: Хуки на стороне клиента располагаются в папке .git/hooks</p>
 
-            <p>git config —global, —local —system
-
-            <p>git config --list --show-origin
-            <p>git config —global user.name 'Vitalii"
-            <p>git config --global user.email johnconnor@gamil.conm
-            <p>git config --list - check all settings
+                <p>#
+                    # Если вы решите использовать какой-либо из
+                    # предустановленных скриптов, то достаточно его просто переименовать, убрав суффикс
+                    # .sample.</p>
+                <p> 1) **Pre-commit** (предкоммит): Запускается перед созданием коммита. Часто используется для проверки
+                    форматирования кода или запуска линтеров.
+                    - Пример: Предотвращение коммита, если код не соответствует стиля</p>
+                <p> 2) **Prepare-commit-msg** (подготовка сообщения коммита): Запускается перед тем, как откроется
+                    редактор
+                    сообщения коммита, позволяя изменить или добавить контент в сообщение.</p>
+                <p> 3) **Commit-msg** (сообщение коммита): Запускается после ввода сообщения коммита, но до его
+                    завершения.
+                    Может использоваться для проверки соблюдения правил написания сообщений.</p>
+                <p> 4) **Post-commit** (посткоммит): Запускается после завершения коммита. Часто используется для
+                    уведомления
+                    команды или логирования информации.</p>
+                <p> 5) **Pre-push**(перед пушем): Запускается перед выполнением `git push`. Используется для проверки
+                    прохождения всех тестов перед отправкой изменений в удаленный репозиторий.
+                    - Пример: Убедиться, что все юнит-тесты проходят перед пушем.
+                </p>
                 <hr>
-            <h5>Create a Commit: Ammend</h5>
-            <p>git status
-            <p>git add .
-            <p>git commit -m 'comment'
-            <p>git commit --amend -m 'comment'
-            <p>git commit --amend --no-edit
+                <p>Server Side hooks</p>
+                <p>Эти хуки запускаются на сервере Git, обычно во время операций, таких как пуш или слияние, и
+                    используются
+                    для обеспечения соблюдения правил на уровне репозитория.</p>
+                <p># **Pre-receive** (предприемный): Запускается на сервере перед тем, как пуш будет принят. Часто
+                    используется для обеспечения соблюдения политик, например, требования прохождения тестов или
+                    завершения
+                    код-ревью.
+                    # - Пример: Отклонение пуша, который не соответствует стандартам вклада в репозиторий.</p>
+                <p># **Update** (обновление): Похож на `pre-receive`, но запускается для каждой ветки, которая
+                    обновляется,
+                    давая больше контроля над отдельными ветками.
+                    # - Пример: Отклонение пуша в ветку `main`, если он исходит не от определенной команды.</p>
+                <p># **Post-receive** (после приема): Запускается после того, как пуш был принят. Часто используется для
+                    деплоя или уведомления.
+                    # - Пример: Триггер сборки в CI (непрерывной интеграции) после пуша нового кода.
+                </p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
                 <hr>
-            <h5>Restore Revert Reset</h5>
-            <p> git restore --staged "fileName"
-            <p>git restore "filename"
-            <p>git revert "commit"
+                <p>
+                    # Хуки для рабочего процесса на основе E-mail
+                    # В первую очередь запускается хук **applypatch-msg**. Он принимает единственный аргумент: имя
+                    временного файла, содержащее предлагаемое сообщение коммита.
+                    # git отменит патч если этот скрипт завершится с ненулевым кодом. Этот хук можно использовать для
+                    проверки формата сообщения или для его нормализации, если ваш скрипт умеет редактировать сообщение
+                    коммита.
 
-            <p>git reset --soft Head~1
-            <p>git reset --mix
-            <p>git reset --hard
-            <p>git rev-list "hash".."hash" --count # Посчитать количество коммитов от хеша к хешу
+                    # Следующим запускается хук **pre-applypatch**
+                    # Здесь всё немного запутанно: хук запускается после применения патча, но перед созданием коммита,
+                    что
+                    позволяет проверить состояние кода до создания коммита.
+                    # В этот момент можно запустить тесты или другим способом проверить состояние проекта. Если что-то
+                    пропущено или тесты не пройдены, скрипт должен завершиться с #енулевым кодом, что остановит
+                    выполнение
+                    команды git am, а коммит не будет создан.
 
-            <p>git rev-list "hash"..head
-            <p>git rev-list HEAD —count посчитать колличество коммитов
-            <p>git rev-list c07147e..head --count
-                <hr>
-            <h5>Branches: switch: create: merged no merged: push a bracnh to remote repo </h5>
-            <p>git branch -v - verbose verion
-            <p>git switch -c "branchName"
-            <p>git bracnh "branhcName" head becomes on current branch
-            <p>git branch --no-merged
-            <p>git branch --merged
-
-            <p>git branch -d Testing - delete local branch
-            <p>git branch -D testing - forced localremoval
-
-
-            <p>git branch --move "bad_branch_name" "correct_name" - rename branch
-            <p>git push --set-upstream origin "correct_branch" - add the new branch into remote
-            <p>git push origin —delete master - delete remote branch
-            <p>git branch -v
-
-            <p>[]
-            <p>git switch -c new_branch - created
-            <p>git push --set-upstream origin "new_branch" - add to remote
-            <p>git push origin --delete new_branch -delete from remote
-            <p>[]
-
-            <p>git remote add "shortName" "remoteBranch name" - how to add remote repo.
-                <hr>
-            <h5>Merge VS Rebase: Squash: </h5>
-            <p>git merge "branchName"
-            <p>git rebase "branchName"
-            <p>git rebase -i Head~3 - # squash - but we need to count hashes you want to squash
-            <p>git rev-list "hash"..head
-            <p>git rev-list HEAD —count посчитать колличество коммитов
-            <p>git rev-list c07147e..head --count
-
-            <p>r - изменить коммент
-            <p>p - оставить коммент
-            <p>f - cжать без коммента
-            <p>s - сжать с комментом
-            <p>d - удалить
-            <p>exec - execute tests or smth that can be executable
-                <hr>
-            <h5>SSH</h5>
-            <p>ssh-keygen.exe -t ed25519 -C 'your_email'
-            <p>~/.ssh/
-            <p> copy pub key > put in github->setting->ssh
-            <p>ssh -T git@github.com - check ssh
-            <p>ssh -T git@gitlab.com - chec gitlab ssh
-                <hr>
-            <h5>Tags</h5>
-            <p>git tag
-            <p>git tag -a "tagName" -m "comment"
-
-            <p></p>git tag -d v1
-            <p>git tag -a "tagName" "commitHash"
-            <p>git checkout "tagName" - This will put you in a detached HEAD state, meaning you’re not on any branch. If
-                you want to make changes,you should create a new branch from that commit:
-            <p>git git checkout -b "new_branch_name" "commit_hash"
-                <hr>
-            <h5>Stash</h5>
-            <p>git stash
-            <p>git stash list
-            <p>git stash apply {stashIndex}
-            <p>git stash pop
-            <p>git stash --keep-index
-            <p>git stash --include-untracked
-            <p>git stash --patch
-            <p>git stage branch "branchName"
-                <hr>
-            <h5>Logs</h5>
-            <p>git log
-            <p>git log --stat
-            <p>git log --oneline --decorate --all --graph
-            <p>git log -p
-                <hr>
-            <h5>Alliases</h5>
-            <p>git config --global alias.lol log -10
-            <p>git config --global alias.last log -1 -p
-            <p>git config --global alias.co checkout
-            <p>git config --global alias.br branch
-            <p>git config --global alias.ci commit
-            <p>git config --global alias.s status
-            <p>git config --global alias.last 'log -1 HEAD’
-            <p>git config --global alias.graph '—oneline —decorate —graph —all'
-            <p>git config --global alias.aa "add ."
-            <p>git config --global alias.s "status"
-                <hr>
-            <h5>Reflog</h5>
-            <p>git reflog
-            <p># вы увидите список всего, что сделали в git, во всех ветках! у каждого элемента есть индекс
-                HEAD@{индекс} найдите тот, перед которым всё сломалось
-            <p>git reset HEAD@{index} волшебная машина времени
-
-            <p># How to restore deleted commit
-            <p>git reflog # показывает список ДЕЙСТВИЙ во всех ветках
-            <p>reset HEAD@{index}
-            <p>git branch "newBranchName" "commitHash"
-                <hr>
-            <h5>Hooks</h5>
-            #
-            HOOKS это возможность запуска пользовательских скриптов в случае позникновения определённых событий
-            #
-            <p>
-            <p># Есть 2 вида хуков</p>
-            <p># Клиентские и Серверные </p>
-            <hr>
-            </p>
-            <p># Клиентские:
-                # Находятся: Хуки на стороне клиента располагаются в папке .git/hooks</p>
-
-            <p>#
-                # Если вы решите использовать какой-либо из
-                # предустановленных скриптов, то достаточно его просто переименовать, убрав суффикс
-                # .sample.</p>
-            <p> 1) **Pre-commit** (предкоммит): Запускается перед созданием коммита. Часто используется для проверки
-                форматирования кода или запуска линтеров.
-                - Пример: Предотвращение коммита, если код не соответствует стиля</p>
-            <p> 2) **Prepare-commit-msg** (подготовка сообщения коммита): Запускается перед тем, как откроется редактор
-                сообщения коммита, позволяя изменить или добавить контент в сообщение.</p>
-            <p> 3) **Commit-msg** (сообщение коммита): Запускается после ввода сообщения коммита, но до его завершения.
-                Может использоваться для проверки соблюдения правил написания сообщений.</p>
-            <p> 4) **Post-commit** (посткоммит): Запускается после завершения коммита. Часто используется для
-                уведомления
-                команды или логирования информации.</p>
-            <p> 5) **Pre-push**(перед пушем): Запускается перед выполнением `git push`. Используется для проверки
-                прохождения всех тестов перед отправкой изменений в удаленный репозиторий.
-                - Пример: Убедиться, что все юнит-тесты проходят перед пушем.
-            </p>
-            <hr>
-            <p>Server Side hooks</p>
-            <p>Эти хуки запускаются на сервере Git, обычно во время операций, таких как пуш или слияние, и используются
-                для обеспечения соблюдения правил на уровне репозитория.</p>
-            <p># **Pre-receive** (предприемный): Запускается на сервере перед тем, как пуш будет принят. Часто
-                используется для обеспечения соблюдения политик, например, требования прохождения тестов или завершения
-                код-ревью.
-                # - Пример: Отклонение пуша, который не соответствует стандартам вклада в репозиторий.</p>
-            <p># **Update** (обновление): Похож на `pre-receive`, но запускается для каждой ветки, которая обновляется,
-                давая больше контроля над отдельными ветками.
-                # - Пример: Отклонение пуша в ветку `main`, если он исходит не от определенной команды.</p>
-            <p># **Post-receive** (после приема): Запускается после того, как пуш был принят. Часто используется для
-                деплоя или уведомления.
-                # - Пример: Триггер сборки в CI (непрерывной интеграции) после пуша нового кода.
-            </p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p>end</p>
-            <hr>
-            <p>
-                # Хуки для рабочего процесса на основе E-mail
-                # В первую очередь запускается хук **applypatch-msg**. Он принимает единственный аргумент: имя
-                временного файла, содержащее предлагаемое сообщение коммита.
-                # git отменит патч если этот скрипт завершится с ненулевым кодом. Этот хук можно использовать для
-                проверки формата сообщения или для его нормализации, если ваш скрипт умеет редактировать сообщение
-                коммита.
-
-                # Следующим запускается хук **pre-applypatch**
-                # Здесь всё немного запутанно: хук запускается после применения патча, но перед созданием коммита, что
-                позволяет проверить состояние кода до создания коммита.
-                # В этот момент можно запустить тесты или другим способом проверить состояние проекта. Если что-то
-                пропущено или тесты не пройдены, скрипт должен завершиться с #енулевым кодом, что остановит выполнение
-                команды git am, а коммит не будет создан.
-
-                # Последним запускается хук post-applypatch, который вызывается уже после того как коммит создан.
-                # `Вы можете его использовать для уведомления группы или автора патча о его применении. С помощью этого
-                хука вы не можете прервать процесс применения патча.
-            </p>
+                    # Последним запускается хук post-applypatch, который вызывается уже после того как коммит создан.
+                    # `Вы можете его использовать для уведомления группы или автора патча о его применении. С помощью
+                    этого
+                    хука вы не можете прервать процесс применения патча.
+                </p>
+        </section>
 
 </html>
 </p>
