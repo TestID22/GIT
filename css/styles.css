@@ -192,8 +192,18 @@ input[type="radio"]:checked+label {
 }
 
 .block_info {
-    padding: 5px;
+    padding: 15px;
+    margin: 5px;
     border: 3px solid grey;
+    border-radius: 10px;
+}
+
+.block_info h5 {
+    color: #00ff00;
+}
+
+.block_info p {
+    color: #e0dede;
 }
 
 .block {
@@ -221,6 +231,9 @@ commit li span {
 }
 
 .description h5 {
+    align-self: start;
+    ;
+    margin: 5px;
     padding: 5px;
     color: #00ff00;
 }
