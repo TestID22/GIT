@@ -31,7 +31,7 @@
         <div class="buttons_block">
             <button class="neon-button" onclick="toggleText('advanced_of_vcs')">GIT</button>
             <button class="neon-button" onclick="toggleText('commit')">Commit</button>
-            <button class="neon-button" onclick="toggleText('text1')">Branch</button>
+            <button class="neon-button" onclick="toggleText('brach')">Branch</button>
             <button class="neon-button" onclick="toggleText('text1')">Merge/Rebase</button>
             <button class="neon-button" onclick="toggleText('text1')">Gitignore</button>
             <button class="neon-button" onclick="toggleText('text1')">Cloning a repository</button>
@@ -183,13 +183,54 @@
             </div>
             <h5>Revert</h5>
             <div class="sub_topic">
-                <span class="code">git revert "commitHash"</span><span class="comment"> - отменить все сдленные
-                    изменения в коммите, и создать новый коммит, старый коммит останется в истории</span>
+                <p><span class="code">git revert "commitHash"</span><span class="comment"> - отменить все сдленные
+                        изменения в коммите, и создать новый коммит, старый коммит останется в истории</span></p>
+            </div>
+        </div>
+        <!--Branches-->
+        <div id="brach" class="hidden block_info scrollable">
+            <h5>Branches</h5>
+            <div class="sub_topic">
+                <p>Ветка - это независимая линия разработки. Которая позволяет вести разработку с несколькими версиями
+                    проекта параллельно. </p>
+            </div>
+            <h5>Create a branch</h5>
+            <div class="sub_topic">
+                <p><span class="code">git branch "branchName"</span>
+                <p><span class="code">git switсh -c "branchName"</span>
+            </div>
+            <h5>Hереименовать ветку: Rename Branch</h5>
+            <div class="sub_topic">
+                <p><span class="code">git branch —move bad_name correct_name </span><span class="comment">-
+                        локальное переименование</span>
+                <p><span class="code">git branch -m old_name new_name</span></p>
+                </p>
+            </div>
+            <h5>Переключаться - проссмотр веток</h5>
+            <div class="sub_topic">
+                <p><span class="code">git checkout "hash" </span>- перейти в бранч с нужным коммитом, поиск коммита по
+                    Хешу
+                <p><span class="code">git switch main</span> - веруться в мастер ветку (мейн)</p>
+                <p><span class="code">git switch "branchName"</span></p>
+                <p><span class="code">git branch -v</span> - вывести все веткеи с полседники комитами </p>
+                <p><span class="code">git branch --merged</span> -показать слитые ветки </p>
+                <p><span class="code">git branch --no-merged</span> - показать те что не слитые </p>
+                <p><span class="code">git branch -c "branchName"</span></p>
+                </p>
+            </div>
+            <h5>Запшить ветку в удалённый репозиторий:</h5>
+            <div class="sub_topic">
+                <p><span class="code">git push --set-upstream origin corrected-branch-name</span>- пуш в удалённый
+                    репозиторий ветки</p>
+                <p><span class="code">git push --set-upstream origin vsabadash/applying_specific_options</span> - если
+                    гит не видит ветку,
+                    запушить ведку в удалённый репо (origin) текущая ветка в</p>
+                <p><span class="code">git push origin --delete bad-branch-name </span>- удалить из удалённого репо</p>
             </div>
         </div>
         <!--All git commands-->
         <section description="">
-            <div id="commands" class="hidden block_info  description">
+            <div id=" commands" class="hidden block_info  description">
                 <h5>All Commands</h5>
                 <hr>
                 <h5>Base</h5>
