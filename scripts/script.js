@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  var registrationButton = document.getElementById('registrationButton');
-  var registrationForm = document.getElementById('registrationForm');
-
-  registrationButton.addEventListener('click', function () {
-    registrationForm.classList.toggle('hidden');
-  });
 });
 
 function fallLetters() {
@@ -20,8 +14,13 @@ function fallLetters() {
 }
 
 function toggleText(id) {
+  closeAllTabs();
   const textElement = document.getElementById(id);
   textElement.classList.toggle('hidden');
 }
 
 
+function closeAllTabs() {
+  const tabs = document.querySelectorAll(".block_info:not(.hidden)");
+  tabs.forEach(tab => tab.classList.add('hidden'));
+}

@@ -31,7 +31,7 @@
         <div class="buttons_block">
             <button class="neon-button" onclick="toggleText('advanced_of_vcs')">GIT</button>
             <button class="neon-button" onclick="toggleText('commit')">Commit</button>
-            <button class="neon-button" onclick="toggleText('brach')">Branch</button>
+            <button class="neon-button" onclick="toggleText('branch')">Branch</button>
             <button class="neon-button" onclick="toggleText('text1')">Merge/Rebase</button>
             <button class="neon-button" onclick="toggleText('text1')">Gitignore</button>
             <button class="neon-button" onclick="toggleText('text1')">Cloning a repository</button>
@@ -188,7 +188,7 @@
             </div>
         </div>
         <!--Branches-->
-        <div id="brach" class="hidden block_info scrollable">
+        <div id="branch" class="hidden block_info scrollable">
             <h5>Branches</h5>
             <div class="sub_topic">
                 <p>Ветка - это независимая линия разработки. Которая позволяет вести разработку с несколькими версиями
@@ -196,10 +196,11 @@
             </div>
             <h5>Create a branch</h5>
             <div class="sub_topic">
-                <p><span class="code">git branch "branchName"</span>
-                <p><span class="code">git switсh -c "branchName"</span>
+                <p><span class="code">git branch "branchName"</span> - создаст ветку, но не перейдёт в неё. HEAD будет
+                    указывать на текущую ветку.</p>
+                <p><span class="code">git switсh -c "branchName"</span> - создаст ветку и перейдёт в неё.</p>
             </div>
-            <h5>Hереименовать ветку: Rename Branch</h5>
+            <h5>Переименовать ветку: Rename Branch</h5>
             <div class="sub_topic">
                 <p><span class="code">git branch —move bad_name correct_name </span><span class="comment">-
                         локальное переименование</span>
@@ -212,7 +213,7 @@
                     Хешу
                 <p><span class="code">git switch main</span> - веруться в мастер ветку (мейн)</p>
                 <p><span class="code">git switch "branchName"</span></p>
-                <p><span class="code">git branch -v</span> - вывести все веткеи с полседники комитами </p>
+                <p><span class="code">git branch -v</span> - вывести все веткеи с полседними комитами </p>
                 <p><span class="code">git branch --merged</span> -показать слитые ветки </p>
                 <p><span class="code">git branch --no-merged</span> - показать те что не слитые </p>
                 <p><span class="code">git branch -c "branchName"</span></p>
@@ -230,7 +231,7 @@
         </div>
         <!--All git commands-->
         <section description="">
-            <div id=" commands" class="hidden block_info  description">
+            <div id="commands" class="hidden block_info  description">
                 <h5>All Commands</h5>
                 <hr>
                 <h5>Base</h5>
